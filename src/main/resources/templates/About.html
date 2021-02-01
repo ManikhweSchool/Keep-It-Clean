@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<link href = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\css\bootstrap-4.3.1-dist\css\bootstrap.min.css" 
+		th:href="@{/css/bootstrap-4.3.1-dist/css/bootstrap.min.css}"
+		rel = "stylesheet"></link>
+		<link rel="stylesheet" href="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\css\about.css" 
+		th:href="@{/css/about.css}"></link>
+		<title>About</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 btn-group btn-group-justified">
+					<a href="index.html" th:href = "@{/index}" target = "_blank" 
+					class="btn" style="background-color:black;
+					color:white">Home</a>
+					<a href="#" th:href = "@{/about}" class="btn" 
+					style="background-color:black;color:white">About</a>
+					<a href="Contact.html" th:href = "@{/contact}" target = "_blank" 
+					class="btn" style="background-color:black;color:white">
+					Contacts</a>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-10 offset-md-1">
+					<h4 class="mt-5"><strong>My Home Is My Reflection Pty(LTD)</strong> is a company 
+					that is dedicated to keeping your home as attractive as possible. That goal
+					is achieved in different ways, shapes, or forms by means of different services 
+					the company provides. Buying or building a house is one thing, but taking care 
+					of it is something else of which only a few can stand. Obviously you don't want 
+					to belong to the majority of people that would rather stay in less glowing home 
+					than having to pay few dollars to keep their home neat.</h4>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 offset-md-1">
+					<h4 class="mt-4">We can take care of your home at any point in time. You simple need to 
+					<a href="SurveyRequestForm.html" th:href="@{/surveyform}" target="_blank">request a survey
+					</a> that way a surveyor from our company will come by 
+					for checking or measuring and then tell you what the costs will be. Ofcouse requesting 
+					a survey is for free. You don't have to pay anything. Even after a survey is done,
+					you are at liberty to change your mind and no longer be interested to our service.
+					In the case you happen to look forward to our service after the survey is done, you can
+					start by paying all the amount needed on our <a href="Account.html" th:href="@{/account}" 
+					target="_blank"> business account</a> and then send us a proof of payment via email. 
+					We always strongly suggest our clients do a follow up on their payment to avoid any 
+					confusion, money loss, etc.
+						
+					</h4>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

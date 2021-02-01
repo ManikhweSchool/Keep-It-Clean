@@ -1,0 +1,57 @@
+@charset "ISO-8859-1";
+body{
+	background-image: url(../images/Web Pics/Bizana_Home.jpg);
+	background-size:cover;
+        
+}
+.container-fluid{
+	background-image: url(Bizana_Home.jpg);
+	background-size:cover;
+}
+label{
+	color:white;
+}
+#Form_Cover{
+	width : 100%;
+	height : 400px;
+	position : relative;	
+}
+
+#Form{	
+	position : absolute;
+	left : 20%;
+	right : 15%;
+	top : 50%;
+	bottom : 15%;
+	
+}
+
+#Header_Items{
+	list-style-type : none;
+	margin : 0px;
+	padding : 20px 0px;
+	background : hsl(250, 30%, 30% );
+	overflow : hidden;
+}
+
+.Header_Item{
+	display : inline;
+	font-size : 20px;
+	margin : 0px;
+		
+}
+.Header_Link{
+	text-decoration : none;
+	text-align : center;
+	
+	margin : 0px;
+	padding : 5px 3%;
+	color : white;
+}
+.Header_Link:hover{
+	color : blue;
+	text-decoration : none;
+}
+
+
+

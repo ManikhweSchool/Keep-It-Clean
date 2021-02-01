@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="ISO-8859-1">
+	    <link href = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\css\bootstrap-4.3.1-dist\css\bootstrap.min.css" 
+		th:href="@{/css/bootstrap-4.3.1-dist/css/bootstrap.min.css}"
+		rel = "stylesheet"></link>
+		<link rel="stylesheet" href="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\css\ccontact.css" 
+		th:href="@{/css/ccontact.css}"></link>
+        <title>Contacts</title>
+    </head>
+    <body>
+	<div class = "container-fluid">
+        <!--The on hover css property i can't use, reason being i don't know how.-->
+        <div id="Header_Items" class = "row">
+            	<div class = "col-xs-12 col-sm-4 Header_Item">
+            		<a href = "index.html" th:href="@{/index}" class = "Header_Link" target = "_blank">Home</a>	
+            	</div>
+            	<div class = "col-xs-12 col-sm-4 Header_Item">
+            		<a href = "About.html" th:href="@{/about}" class = "Header_Link" target = "_blank">About</a>
+            	</div>
+            	<div class = "col-xs-12 col-sm-4 Header_Item">
+            		<a href = "#" th:href="@{/contact}" class = "Header_Link">Contacts</a>
+            	</div>	
+            </div>
+       <div class = "row mt-3">
+                <div class = "col-md-12">
+                    <!-- Google map needed for Mayville Primary School, Cator Crest Library or CAO. -->
+                    <iframe 
+                        src = "https://www.google.com/maps/embed?pb=
+                        !1m18!1m12!1m3!1d5819.418691603769!2d30.9722138457359
+                        9!3d-29.857148101567955!2m3!1f0!2f0!3f0!3m2!1i1024!2i7
+                        68!4f13.1!3m3!1m2!1s0x0%3A0xaf445154466b1a73!2sCato+Crest
+                        +Community+Hall!5e0!3m2!1sen!2sza!4v1565602664873!5m2!1sen!
+                        2sza"  style="border:0;" 
+                        width = "100%" height = "400">
+                    </iframe>
+                </div>
+            </div>
+            <div class = "row mt-3">
+                <div class = "col-md-5">	
+                    <br/>
+                    <div class = "Location_Contact">
+                        <address>
+                        	<h5 >Mayville Cato Crest 6257 Ashwell Road 
+                            Kwa Zulu Natal,Durban 4091  
+                            South Africa</h5>   
+                        </address>
+                       <h5>			
+                            Email : wecare@myhomeismyreflection.co.za<br/>
+                            Phone Number : 0717572711
+                        </h5>
+                        <h5>			
+                            Close To The Hall On The Right.
+                        </h5>
+                    </div>
+                </div>
+                <div class = "col-md-4 offset-md-3">
+                    <br/>
+                    <iframe src="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\images\Web Pics\Cato Crest Hall.jpg" 
+                    th:src = "@{/images/Web Pics/Cato Crest Hall.jpg}" 
+                    id = "Goku_Frame" width = "100%" height = "255px">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

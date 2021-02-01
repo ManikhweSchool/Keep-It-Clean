@@ -1,0 +1,31 @@
+@charset "ISO-8859-1";
+.container{
+				
+	position:absolute;
+	min-height:400px;
+	background-color:pink; 
+	color:purple;
+	border : solid black 3px;
+	width : 50%;
+	bottom:10%;
+	left:25%;
+}
+#within-container{
+	width : 80%;
+	position:absolute;
+	min-height:395px;
+	bottom:0;
+}
+#div-one{
+	position:relative;
+	width : 100%;
+	min-height:600px;
+}
+body{
+	
+	background-image:url(RequestForm.jpg);
+	color:purple;
+}
+h5{
+	color : #dc3545;
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<link href = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\css\bootstrap-4.3.1-dist\css\bootstrap.min.css" 
+		th:href="@{/css/bootstrap-4.3.1-dist/css/bootstrap.min.css}" rel = "stylesheet"></link>
+		<link rel="stylesheet" href="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\css\surveyform.css" 
+		th:href="@{/css/surveyform.css}"></link>
+		<link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css">
+		<script src = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\js\congratulations.js" 
+	    th:src = "@{/js/congratutlations.js}" type = "text/javascript"></script>
+	    <script src = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\js\surveyform.js" 
+	    th:src = "@{/js/surveyform.js}" type = "text/javascript"></script>
+		<title>Survey Request Form</title>
+
+		
+	</head>
+	<body>
+		<div class="container" style="color:white;">
+			<div class="row">
+				<div class="col-md-12 btn-group btn-group-justified">
+					<a href = "index.html" th:href="@{/index}" target = "_blank"  class="btn link" style="background-color:black;">Home</a>
+					<a href = "About.html" th:href="@{/about}" target = "_blank"  class="btn link" style="background-color:black;">About</a>
+					<a href = "Contact.html" th:href="@{/contact}" target = "_blank"  class="btn link" style="background-color:black;">Contacts</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-9 offset-md-2 col-sm-12 mt-3">
+					<blockquote>
+						<h3>You Can Leave Your Details In Order For The Job To Be Done.</h3>
+					</blockquote>
+				</div>
+			</div>
+			<fieldset>
+				<legend class="col-md-6 offset-md-5 offset-sm-3 col-sm-4 h4">Your Details</legend>
+				<form th:action="@{/surveyform}" th:object="${request}" method="post">
+					<div class="row">
+						<div th:if="${requestAddedOnDatabase==false}" class="col-md-7 offset-md-4 col-sm-9 offset-sm-2" id="Incorrect_Reqeust_Div">
+							<h3 th:text="|Try Again : ${status}|" style="color:red">Try Again. </h3>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-1 offset-md-4 col-sm-2 offset-sm-2">
+							<label for="clientname">Name </label>
+						</div>
+						<div class="col-md-7 col-sm-8">
+							<input type="text" th:field="*{job.client.clientName}" name="clientname" placeholder="Client Name"  required ="required"></input>
+						</div>
+						<div class="col-md-1 offset-md-4 col-sm-2 offset-sm-2">
+							<label for="clientsurname">Surname </label>	
+						</div>
+						<div class="col-md-6 col-sm-8">
+							<input type="text" th:field="*{job.client.clientSurname}" name="clientsurname" placeholder="Client Surname"  required ="required"></input>
+						</div>
+						<div class="col-md-1 offset-md-4 col-sm-2 offset-sm-2">
+							<label for="clientemail">Email </label>
+						</div>
+						<div class="col-md-7 col-sm-8">
+							<input type="text" th:field="*{job.client.clientEmail}" name="clientemail" placeholder="Client Email"  required ="required"></input>
+						</div>
+						<div class="col-md-1 offset-md-4 col-sm-2 offset-sm-2">
+							<label for="clientphonenumber">Cell No </label>
+						</div>
+						<div class="col-md-7 col-sm-8">
+							<input type="text" th:field="*{job.client.clientPhoneNumber}" name="clientphonenumber" placeholder="Client Phone Number"  required ="required"></input>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-7 offset-md-5 col-sm-9 offset-sm-1 pl-5">
+							<h4>Pick Service Of Interest</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 offset-md-3 col-sm-5 offset-sm-2">
+							<label>
+								<input type="checkbox" th:field="*{job.jobNames}" name="service" value="Car Washing">
+								Car Washing
+							</label>
+						</div>
+						<div class="col-md-3 col-sm-5">
+							<label>
+								<input type="checkbox" th:field="*{job.jobNames}" name="service" value="Roof Cleaning">
+								Roof Cleaning
+							</label>
+						</div>
+						<div class="col-md-3 offset-md-0 col-sm-5 offset-sm-2">
+							<label>
+								<input type="checkbox" th:field="*{job.jobNames}" name="service" value="Paving Cleaning">
+								Paving Tiles Cleaning
+							</label>
+						</div>
+						
+						<div class="col-md-3 offset-md-3 col-sm-5 offset-sm-2">
+							<label>
+								<input type="checkbox" th:field="*{job.jobNames}" name="service" value="Retaining Walls Cleaning">
+								Retaining Walls Cleaning
+							</label>
+						</div>
+						<div class="col-md-3 col-sm-5">
+							<label>
+								<input type="checkbox"  th:field="*{job.jobNames}" name="service" value="Tiling">
+								Tiles Cleaning
+							</label>
+						</div>
+						<div class="col-md-3 col-sm-5">
+							<label>
+								<input type="checkbox"  th:field="*{job.jobNames}" name="service" value="Sofa Cleaning">
+								Sofa/Couch Cleaning
+							</label>
+						</div>
+						
+						<div class="col-md-3 offset-md-3 col-sm-5 offset-sm-2">
+							<label>
+								<input type="checkbox" th:field="*{job.jobNames}" name="service" value="Matt Cleaning">
+								Floor Matt Cleaning
+							</label>
+						</div>
+						<div class="col-md-3 col-sm-5">
+							<label>
+								<input type="checkbox"  th:field="*{job.jobNames}" name="service" value="Pool Cleaning">
+								Swimming Pool Cleaning
+							</label>
+						</div>
+						<div class="col-md-3 col-sm-5">
+							<label>
+								<input type="checkbox"  th:field="*{job.jobNames}" name="service" value="other">
+								other
+							</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-7 offset-md-5 col-sm-9 offset-sm-1 pl-5">
+							<h4>Pick Date For House Surveying</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-3 offset-md-3 col-sm-5 offset-sm-2">
+							<label>
+								<input th:field="*{selectedDay}" type="radio" name="surveymoment" value="Today">
+								Today
+							</label>
+						</div>
+						<div class="col-md-3 col-sm-5">
+							<label>
+								<input  th:field="*{selectedDay}" type="radio" name="surveymoment" value="Tomorrow">
+								Tomorrow
+							</label>
+						</div>
+						<div class="col-md-3 offset-md-0 col-sm-5 offset-sm-2">
+							<label>
+								<input  th:field="*{selectedDay}" type="radio" name="surveymoment" value="Monday">
+								Monday
+							</label>
+						</div>
+						<div class="col-md-3  offset-md-3 col-sm-5">
+							<label>
+								<input  th:field="*{selectedDay}" type="radio" name="surveymoment" value="Tuesday">
+								Tuesday
+							</label>
+						</div>
+						<div class="col-md-3 offset-md-0 col-sm-5 offset-sm-2">
+							<label>
+								<input  th:field="*{selectedDay}" type="radio" name="surveymoment" value="Wednesday">
+								Wednesday
+							</label>
+						</div>
+						<div class="col-md-3 col-sm-5">
+							<label>
+								<input  th:field="*{selectedDay}" type="radio" name="surveymoment" value="Thursday">
+								Thursday
+							</label>
+						</div>
+						<div class="col-md-3 offset-md-3 col-sm-5 offset-sm-2">
+							<label>
+								<input  th:field="*{selectedDay}" type="radio" name="surveymoment" value="Friday">
+								Friday
+							</label>
+						</div>
+						<div class="col-md-3 col-sm-5">
+							<label>
+								<input  th:field="*{selectedDay}" type="radio" name="surveymoment" value="Surtaday">
+								Surtaday
+							</label>
+						</div>
+						<div class="col-md-3 offset-md-0 col-sm-10 offset-sm-2">
+							<label>
+								<input  th:field="*{selectedDay}" type="radio" name="surveymoment" value="Sunday">
+								Sunday
+							</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-7 offset-md-5 col-sm-10 offset-sm-2 pl-5">
+							<h4>Or Pick A Specific Date</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 offset-md-4 col-sm-8 offset-sm-2">
+							<div>
+								<p>Date: <input type="date" 
+								th:field="*{preferedDate}" 
+								id="datepicker" onchange=""  required ="required">
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8 offset-md-4 col-sm-10 offset-sm-2">
+							<label id="address" for="addressTextArea">Address</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-8 offset-md-4 col-sm-10 offset-sm-2">
+							<textarea rows="5" cols="45" th:field="*{job.jobAddress.address}" id="addressTextArea"  required ="required"> </textarea>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-1 offset-md-4 col-sm-1 offset-sm-2">
+							<input style="background-color:black;color:white;" 
+							type="submit" name="submit_button" value="Submit"
+							required ="required">
+						</div>
+					</div>
+				</form>
+			</fieldset>
+		</div>
+	</body>
+	<script src = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\js\jquery-ui-1.12.1\external\jquery\jquery.js"
+	th:src="@{/js/jquery-ui-1.12.1/external/jquery/jquery.js}">
+	</script>
+	<script src = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\js\jquery-ui-1.12.1\jquery-ui.js"
+	th:src="@{/js/jquery-ui-1.12.1/jquery-ui.js}">
+	</script>
+	<script>
+		$("document").ready(function(){
+
+			$( "#datepicker" ).datepicker();
+			$("#Incorrect_Reqeust_Div").slideToggle(15000);
+			
+			
+		});
+		
+	</script>
+</html>

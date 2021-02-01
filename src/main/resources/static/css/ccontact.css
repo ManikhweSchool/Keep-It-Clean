@@ -1,0 +1,69 @@
+@charset "ISO-8859-1";
+body{
+	background-color : grey;
+	
+}
+iframe{
+	background-color : white;
+}
+
+
+.Location_Contact,#Booking_Message{
+	text-align : justify; 
+	color : white;
+}
+	.Location_Contact{
+	padding-right : 40px;
+}
+
+#Goku_Frame{
+	padding-left : 10px;
+}
+
+#Booking_Message{
+	padding-left : 40px;
+}
+
+#Header_Items{
+	list-style-type : none;
+	margin : 0px;
+	padding : 10px 0px;
+	overflow : hidden;
+	background : black;
+}
+
+.Header_Item{
+	display : inline;
+	font-size : 20px;
+	margin : 0px;
+	text-align : center;
+}
+
+.Header_Link{
+	text-decoration : none;
+	
+	
+	margin : 0px;
+	padding : 5px 3%;
+	color : white;
+}
+
+.Header_Link:hover:not(#Active_Page_Link):not(#SignIn_Page_Link){
+	color : blue;
+}
+#Active_Page_Link:hover{
+	color : white;
+}
+.Header_Link:hover{
+	text-decoration : none;
+}
+
+#SignIn_Page_Link{
+	float : right;
+	background-color : blue;
+}
+
+#SignIn_Page_Link:hover{
+	color : hsl(250, 30%, 30% );
+	
+}

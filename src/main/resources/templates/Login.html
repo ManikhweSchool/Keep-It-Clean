@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="ISO-8859-1">
+	    <link href = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\css\bootstrap-4.3.1-dist\css\bootstrap.min.css" 
+		th:href="@{/css/bootstrap-4.3.1-dist/css/bootstrap.min.css}"
+		rel = "stylesheet"></link>
+		<link rel="stylesheet" href="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\css\login.css" 
+		th:href="@{/css/login.css}"></link>
+        <title>Login</title>
+    </head>
+    <body>
+        <div class = "container-fluid">
+            <div id="Header_Items" class = "row">
+            	<div class = "col-xs-6 col-sm-4 col-md-2 Header_Item">
+            		<a href = "index.html" th:href="@{/admin/index}" class = "Header_Link" target = "_blank">Home</a>	
+            	</div>
+            	<div class = "col-xs-6 col-sm-4 col-md-2 Header_Item">
+            		<a href = "Contact.html" th:href="@{/admin/contact}" class = "Header_Link" target = "_blank">Contacts</a>
+            	</div>
+            	<div class = "col-xs-6 col-sm-4 col-md-2 Header_Item">
+            		<a href = "About.html" th:href="@{/admin/about}" class = "Header_Link" target = "_blank">About</a>
+            	</div>
+            	<div class = "col-xs-6 col-sm-4 col-md-2 Header_Item">
+            		<a href = "#" class = "Header_Link" style = "color : white;" >Login</a>
+            	</div>
+            	<div class = "col-xs-6 col-sm-4 col-md-4 Header_Item">
+            		<a href = "SignIn.html" th:href="@{/admin/signin}" class = "Header_Link SignIn_Page_Link"  style = "float : right;background-color : blue;" 
+				    target = "_blank">SignIn</a>
+            	</div>
+            </div>
+            <div class = "row">
+            	<div id = "Form_Cover">
+                	<form id = "Form" th:action="@{/admin/login}" th:object="${administrator}" method="post">
+                        <div th:if="${LogInPassed==false}" class="error" id="Incorrect_Credentials_Div">
+                        	<h3 th:text="|Try Again : ${status}|" style="color:red">Try Again : Incorrect Credentials </h3>
+                        </div>
+                        <label class = "col-md-1 col-sm-3">Email:</label>
+                        <input th:field="*{email}" class = "col-md-2 col-sm-7" type = "email" id = "Email-Text-Box">
+                        <!-- Only Apply mr-4 On medium size screens. -->
+                        <label class = "col-md-1 mr-4 col-sm-3">Password: </label>
+                        <input th:field="*{password}" class = "col-md-2 col-sm-7" type = "password" id = "Password-Text-Box">
+                        <!-- Apply mt-2 On small size screens. -->
+                        <input class="col-md-2 col-sm-3" type="submit" id = "LoginButton">
+                        <table class = "col-md-12 col-sm-12">
+                        	<tr>
+                        		<td><a href="SignIn.html"  th:href="@{/admin/signin}"style="color:skyblue"><label>Not A Member? </label>SignIn</a></td>
+                        	</tr>
+                        </table>
+                    </form>
+                </div>   
+            </div>
+        </div>
+    </body>
+    <script src = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\js\jquery-ui-1.12.1\external\jquery\jquery.js"
+    th:src="@{/js/jquery-ui-1.12.1/external/jquery/jquery.js}"></script>
+	<script>
+		$("document").ready(function(){
+
+			$("#Incorrect_Credentials_Div").slideToggle(5000);
+			
+		});
+		
+	</script>
+</html>
+

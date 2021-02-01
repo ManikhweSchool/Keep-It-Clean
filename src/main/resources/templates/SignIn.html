@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="ISO-8859-1">
+	    <link href = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\css\bootstrap-4.3.1-dist\css\bootstrap.min.css" 
+	    th:href="@{/css/bootstrap-4.3.1-dist/css/bootstrap.min.css}" rel = "stylesheet"></link>
+	    <link rel="stylesheet" href="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\css\signin.css" 
+	    th:href="@{/css/signin.css}"></link>
+        <title>SignIn</title>
+    </head>
+    <body>
+        <div class = "container-fluid">
+            <div id="Header_Items" class = "row">
+            	<div class = "col-xs-6 col-sm-4 col-md-2 Header_Item">
+            		<a th:href="@{/admin/index}" href = "index.html" class = "Header_Link" target = "_blank">Home</a>	
+            	</div>
+            	<div class = "col-xs-6 col-sm-4 col-md-2 Header_Item">
+            		<a th:href="@{/admin/contact}" href = "Contact.html" class = "Header_Link" target = "_blank">Contacts</a>
+            	</div>
+            	<div class = "col-xs-6 col-sm-4 col-md-2 Header_Item">
+            		<a th:href="@{/admin/about}" href = "About.html" class = "Header_Link" target = "_blank">About</a>
+            	</div>
+            	<div class = "col-xs-6 col-sm-4 col-md-2 Header_Item">
+            		<a th:href="@{/admin/login}" href = "Login.html" target = "_blank"class = "Header_Link" >Login</a>
+            	</div>
+            	<div class = "col-xs-6 col-sm-4 col-md-4 Header_Item">
+            		<a th:href="@{/admin/signin}" href = "#" class = "Header_Link SignIn_Page_Link"  style = "float : right;background-color : blue;" 
+				    >SignIn</a>
+            	</div>
+            </div>
+            <div class ="row">
+                <div class ="col-md-4 offset-md-5 col-sm-9 offset-sm-3 col-xs-11 offset-xs-1">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <form id = "myform" th:action="@{/admin/signin}" th:object="${administrator}" method="post">
+                    	<div th:if="${SignInPassed==false}" class="error" id="Incorrect_Student_Div">
+                        		<h3 th:text="|Try Again : ${status}|" style="color:red">Try Again : Couldn't Register Administrator. </h3>
+                        	</div>
+                    	<ul style="color:white; list-style : none; font-size : 18px">
+                    		<li><label for = "Admin-First-Name">First Name</label></li>
+                    		<li>
+                    			<input type="text" id = "fname-text-box" name = "Admin-First-Name" 
+                    			th:field="*{firstName}" placeholder="Your First Name" required ="required" autofocus="autofocus">
+                    		</li>
+                    		
+                    		<li><label for = "Admin-Last-Name">Last Name</label></li>
+                    		<li><input th:field="*{lastName}" type="text" id = "lname-text-box" name = "Admin-Last-Name" placeholder="Your Last Name" required ="required"></li>
+                    	
+                    		<li><label for = "Admin-Email" >Email</label></li>
+                    		<li><input th:field="*{email}" type="email" id = "email-text-box" name = "Admin-Email" placeholder="Your Email" required ="required"></li>
+                    	
+                    		<li><label for = "Registration-Code">Registration Code</label></li>
+                    		<li><input th:field="*{adminKey}" type="text" id = "code-text-box" 
+                    		name = "Registration-Code" placeholder="Registration Code" 
+                    		maxlength="15" required ="required"></li>
+                    	
+                    		<li><label for = "Password">Password</label></li>
+                    		<li><input th:field="*{password}" type="password" id = "password-text-box" name = "password" placeholder="Password" required ="required"></li>
+                    		
+                    		<li><label for = "CPassword">Confirm Password</label></li>
+                    		<li><input type="password" id = "cpassword-text-box" name = "cpassword" placeholder="Confirm Password" required ="required"></li>
+                    		
+                    		<li>
+                    			<label for = "Previlage"> Administration : </label>
+                    			<input th:field="*{adminType}" type="radio" id = "TypeOneAdmin" name="Previlage" value = "Type|Admin"> <label>Type 1</label>
+                    			<input th:field="*{adminType}" type="radio" id = "TypeTwoAdmin" name="Previlage" value = "Type||Admin"> <label>Type 2</label>
+                    			<input th:field="*{adminType}" type="radio" id = "TypeThreeAdmin" name="Previlage" value = "Type|||Admin"> <label>Type 3</label>
+                    		</li>
+                    		
+                    		<li><input type = "submit" value = "Register"></li>
+                    	</ul>
+                    </form>    
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\js\jquery-ui-1.12.1\external\jquery\jquery.js"
+    th:src="@{/js/jquery-ui-1.12.1/external/jquery/jquery.js}"></script>
+	<script>
+		$("document").ready(function(){
+
+			
+			$("#Incorrect_Student_Div").slideToggle(15000);
+			
+			
+		});
+		
+	</script>
+</html>
+
