@@ -28,7 +28,7 @@ public class KeepItClean extends SpringBootServletInitializer{
             	beans[i].startsWith("Jo") || 
             	beans[i].startsWith("Cli"))
             		System.out.println(beans[i]);
-            System.out.print("<<<<<<<<<>>>>>>>>>>>>");
+            
         };
 	}	
 }

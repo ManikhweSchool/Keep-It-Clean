@@ -2,11 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="ISO-8859-1">
-		<link href = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\css\bootstrap-4.3.1-dist\css\bootstrap.min.css" 
-		th:href="@{/css/bootstrap-4.3.1-dist/css/bootstrap.min.css}"
+		<link th:href="@{/css/bootstrap-4.3.1-dist/css/bootstrap.min.css}"
 		rel = "stylesheet"></link>
-		<link rel="stylesheet" href="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\css\index.css" 
-		th:href="@{/css/index.css}"></link>
+		<link rel="stylesheet" th:href="@{/css/index.css}"></link>
 		<title>Home</title>
 	</head>
 	<body>
@@ -20,76 +18,33 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3 col-sm-12">
-					<h3 class="my-1">Roof Cleaning</h3>
-					<img class="my-1" style="height:90%" src="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\images\Roof_Cleaning\Roof2.jpg" 
-					th:src="@{/images/Roof_Cleaning/Roof2.jpg}" width="100%"></img>
+					<h3 class="my-1">Brick Laying</h3>
+					<img class="my-1" style="height:90%" th:src="@{/images/Brick Laying/Brick1.jpg}" width="100%"></img>
 				</div>
 				<div class="col-md-6  col-sm-12 list-group">
 					<h3 class="my-1">Available Services And Previous Work</h3>
 					<div class="my-1 pre-scrollable">
 						<a href = "#" class="list-group-item dropdown-toggle"
-						id="RCleaningLink">Click To Watch Roof Tiles Cleaning Previous Work</a>							
-						<div id="RCleaningInfo">
-							<br></br>
-							<br></br>
-							<br></br>
-						</div>
+						id="BLayingLink">Click To Watch Brick Laying Previous Work</a>							
 						<a href = "#" class="list-group-item dropdown-toggle" 
-						id="PCleaningLink">Click To Watch Paving Cleaning Previous Work</a>							
-						<div id="PCleaningInfo">
-							<br></br>
-							<br></br>
-							<br></br>
-						</div>
+						id="PlumbingLink">Click To Watch Plumbing Previous Work</a>							
 						<a href = "#" class="list-group-item dropdown-toggle" 
-						id="RWCleaningLink">Click To Watch  Retaining Walls Cleaning Previous Work</a>							
-						<div id="RWCleaningInfo">
-							<br></br>
-							<br></br>
-							<br></br>
-						</div>
+						id="PaintingLink">Click To Watch Painting Previous Work</a>							
 						<a href = "#" class="list-group-item dropdown-toggle" 
-						id="CCleaningLink">Click To Watch Concrete Fence Cleaning Previous Work</a>							
-						<div id="CCleaningInfo">
-							<br></br>
-							<br></br>
-							<br></br>
-						</div>
+						id="RWallsLink">Click To Watch Retaining Walls Previous Work</a>							
 						<a href = "#" class="list-group-item dropdown-toggle" 
-						id="TilingLink">Click To Watch Tiles Cleaning Previous Work</a>
-						<div id="TilingInfo">
-							<br></br>
-							<br></br>
-							<br></br>
-						</div>
+						id="PavingLink">Click To Watch Paving Previous Work</a>
 						<a href = "#" class="list-group-item dropdown-toggle" 
-						id="SofaLink">Click To Watch Sofa/Couch Cleaning Previous Work</a>
-						<div id="SofaInfo">
-							<br></br>
-							<br></br>
-							<br></br>
-						</div>
+						id="TilingLink">Click To Watch Tiling Previous Work</a>
 						<a href = "#" class="list-group-item dropdown-toggle" 
-						id="MattLink">Click To Watch Floor Matt Cleaning Previous Work</a>
-						<div id="MattInfo">
-							<br></br>
-							<br></br>
-							<br></br>
-						</div>
+						id="FenceLink">Click To Watch Fencing Previous Work</a>
 						<a href = "#" class="list-group-item dropdown-toggle" 
-						id="PoolLink">Click To Watch Swimming Pool Cleaning Previous Work</a>
-						<div id="PoolInfo">
-							<br></br>
-							<br></br>
-							<br></br>
-						</div>
-						
+						id="RoofLink">Click To Watch Ceiling Previous Work</a>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-12">
-					<h3 class="my-1">Car Washing</h3>
-					<img class="my-1" style="height:90%" src="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\images\Car\Car1.jpg" 
-					th:src="@{/images/Cart/Car1.jpg}" width="100%"></img>
+					<h3 class="my-1">Plumbing</h3>
+					<img class="my-1" style="height:90%" th:src="@{/images/Plumbing/Project1/plumbing3.jpg}" width="100%"></img>
 				</div>
 			</div>
 			<div class="row">
@@ -100,87 +55,39 @@
 			</div>
 			<div class="row">
 				<div class="col-md-2 my-2 col-sm-6">
-					<h5>Floor Matt Cleaning</h5>
+					<h5>Painting</h5>
 					<img style="height:90%" 
-					src="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\images\Matt\Matt.jpg" 
-					th:src="@{/images/Matt/Matt.jpg}" width="100%"></img>
+					th:src="@{/images/Painting/Painting1.jpg}" width="100%"></img>
 				</div>
 				<div class="col-md-2 my-2 col-sm-6">
-					<h5>Retaining Walls Cleaning</h5>
-					<img style="height:90%" src="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\images\Retaining Walls\Retaining_Walls.jpeg" 
-					th:src="@{/images/Retaining Walls/Retaining_Walls.jpeg}" width="100%"></img>
+					<h5>Retaining Walls</h5>
+					<img style="height:90%" th:src="@{/images/Retaining Walls/Retaining_Walls.jpeg}" width="100%"></img>
 				</div>
 				<div class="col-md-2 my-2 col-sm-6">
-					<h5>Paving\Floor Cleaning</h5>
-					<img style="height:90%" src="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\images\Paving\Paving1.jpg" 
-					th:src="@{/images/Paving/Paving1.jpg}" width="100%"></img>
+					<h5>Paving</h5>
+					<img style="height:90%" th:src="@{/images/Paving/Paving1.jpg}" width="100%"></img>
 				</div>
 				<div class="col-md-2 my-2 col-sm-6">
-					<h5>Room Tiles Cleaning</h5>
-					<img style="height:90%" src="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\images\Tiles\Tiles1.jpg" 
-					th:src="@{/images/Tiling/Tiles1.jpg}" width="100%"></img>
+					<h5>Tiling</h5>
+					<img style="height:90%" th:src="@{/images/Tiling/Tiles1.jpg}" width="100%"></img>
 				</div>
 				<div class="col-md-2 my-2 col-sm-6">
-					<h5>Sofa/Couch Cleaning</h5>
+					<h5>Fencing</h5>
 					<img style="height:90%" 
-					src="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\images\Sofa\Sofa2.jpg" 
-					th:src="@{/images/Sofa/Sofa2.jpg}" width="100%"></img>
+					th:src="@{/images/Fencing/Project1/fence1.jpg}" width="100%"></img>
 				</div>
 				<div class="col-md-2 my-2 col-sm-6">
-					<h5>Swimming Pool Cleaning</h5>
-					<img style="height:90%" src="C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\images\Swimming Pool\Swimming_Pool3.webp"
-					th:src="@{/images/Swimming Pool/Swimming_Pool3.webp}" width="100%"></img>
+					<h5>Ceiling</h5>
+					<img style="height:90%" th:src="@{/images/Ceiling/Ceiling1.jpg}" width="100%"></img>
 				</div>
 			</div>
 		</div>
 	</body>
-	<script src = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\js\jquery-ui-1.12.1\external\jquery\jquery.js" 
-	th:src = "@{/js/jquery-ui-1.12.1/external/jquery/jquery.js}"></script>
+	<script th:src = "@{/js/jquery-ui-1.12.1/external/jquery/jquery.js}"></script>
 	<script>
 		$("document").ready(function(){
 			
-			$("#RCleaningInfo").hide();
-			$("#PCleaningInfo").hide();
-			$("#RWCleaningInfo").hide();
-			$("#CCleaningInfo").hide();
-			$("#SofaInfo").hide();
-			$("#MattInfo").hide();
-			$("#PoolInfo").hide();
-			$("#TilingInfo").hide();
 			
-			$("#RCleaningLink").click(function(){
-			
-				$("#RCleaningInfo").slideToggle(3000);
-			});
-			$("#PCleaningLink").click(function(){
-				
-				$("#PCleaningInfo").slideToggle(3000);
-			});
-			$("#RWCleaningLink").click(function(){
-				
-				$("#RWCleaningInfo").slideToggle(3000);
-			});
-			$("#CCleaningLink").click(function(){
-				
-				$("#CCleaningInfo").slideToggle(3000);
-			});
-			$("#TilingLink").click(function(){
-				
-				$("#TilingInfo").slideToggle(3000);
-			});
-			$("#SofaLink").click(function(){
-				
-				$("#SofaInfo").slideToggle(3000);
-			});
-			$("#MattLink").click(function(){
-				
-				$("#MattInfo").slideToggle(3000);
-			});
-			
-			$("#PoolLink").click(function(){
-				
-				$("#PoolInfo").slideToggle(3000);
-			});
 		});
 	</script>
 </html>

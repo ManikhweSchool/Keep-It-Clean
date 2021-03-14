@@ -2,8 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="ISO-8859-1">
-		<link href = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\css\bootstrap-4.3.1-dist\css\bootstrap.min.css" 
-	    th:href="@{/css/bootstrap-4.3.1-dist/css/bootstrap.min.css}" rel = "stylesheet"></link>
+		<link th:href="@{/css/bootstrap-4.3.1-dist/css/bootstrap.min.css}" rel = "stylesheet"></link>
 		<title>Request Data Table</title>
 	</head>
 	<body>
@@ -41,11 +40,9 @@
 			</div>
 		</div>
 	</body>
-	<script src = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\js\jquery-ui-1.12.1\external\jquery\jquery.js"
-	th:src="@{/js/jquery-ui-1.12.1/external/jquery/jquery.js}">
+	<script th:src="@{/js/jquery-ui-1.12.1/external/jquery/jquery.js}">
 	</script>
-	<script src = "C:\Users\Test\OneDrive\Documents\My-God's-Path-On-Earth\My Home Is My Reflection\roofcleaners\src\main\resources\static\js\jquery-ui-1.12.1\jquery-ui.js"
-	th:src="@{/js/jquery-ui-1.12.1/jquery-ui.js}">
+	<script th:src="@{/js/jquery-ui-1.12.1/jquery-ui.js}">
 	</script>
 	<script>
 		$("document").ready(function(){

@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.keepitclean.model.Job;
 import com.keepitclean.service.JobService;
@@ -25,5 +26,10 @@ public class JobController {
 	public long count() { return service.count();}
 	public Optional<Job> findJob(Long jobId){ 
 		return service.findJob(jobId);
+	}
+	
+	@GetMapping(value="/testimonials")
+	public String findEvidance() {
+		return "Testimonial";
 	}
 }
