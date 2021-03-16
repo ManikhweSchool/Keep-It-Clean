@@ -21,7 +21,7 @@ public class KeepItClean extends SpringBootServletInitializer{
         return args -> {
         
         	String[] beans = ctx.getBeanDefinitionNames();
-            
+
             for(int i = 0; i < beans.length;i++)
             	if(beans[i].startsWith("Re") || 
             	beans[i].startsWith("Adm") || 

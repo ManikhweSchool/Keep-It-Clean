@@ -41,7 +41,7 @@ public class Request implements Serializable, Comparable<Request>{
 	@Column(name="Prefered_Date", nullable = false)
 	private String preferedDate = "";
 	
-	@Column(name="Survey_Day", nullable = false)
+	@Column(name="Survey_Done", nullable = false)
 	private boolean isSurveyDone = false;
 	
 	@Autowired
