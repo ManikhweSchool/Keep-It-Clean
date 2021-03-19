@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication()
 public class KeepItClean extends SpringBootServletInitializer{
 
+	
+	
 	public static void main(String[] args) {
 		
 		SpringApplication.run(KeepItClean.class, args);
@@ -30,5 +32,7 @@ public class KeepItClean extends SpringBootServletInitializer{
             		System.out.println(beans[i]);
             
         };
+        
+        
 	}	
 }
